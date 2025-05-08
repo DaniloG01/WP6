@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servis automobila</title>
+    <link rel="icon" type="image/x-icon" href="slike/proshe.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
+
+<script>
+   function DeleteConfirm() {
+      confirm("Da li ste sigurno da zelite da otkazete termin?");
+   }
+</script>
+
+
+</head>
+<body>
+
+<header class="header">
+
+   <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+      <a href="index.html" class="logo">Servis automobila</span></a>
+
+      <nav class="nav">
+            <a href="index.html">Pocetna</a>
+            <a href="about.html">O nama</a>
+            <a href="services.html">Usluge</a>
+           
+      </nav>
+
+      <a href="appointment.html" class="link-btn">Zakazi servis</a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </div>
+
+</div>
+
+
+<section class="contact" id="contact">
+
+    <h1 class="heading" style="margin-top: 50px;">Otkazi termin: </h1>
+ 
+    <form action="delete.php" method="post" style="margin-bottom: 100px; ">
+       <span>Unesi broj termina :</span>
+       <input type="number"  id="id" name="id" placeholder="Unesite broj termina" class="box" required>
+       <input type="submit" value="Otkazi" name="submit" class="link-btn" onclick="DeleteConfirm()">
+    </form>  
+ 
+ </section>
+
+<section class="footer">
+
+   
+   <div class="credit"> &copy; copyright <span>Servis automobila</span>  </div>
+
+</section>
+    
+</body>
+</html>

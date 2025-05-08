@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servis automobila</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+<?php
+
+session_start();
+
+$default_broj_telefona = isset($_SESSION['broj_telefona']) ? $_SESSION['broj_telefona'] : '';
+
+?>
+<header class="header">
+
+   <div class="container">
+
+      <div class="row align-items-center justify-content-between">
+      <a href="index.html" class="logo">Servis automobila</span></a>
+
+      <nav class="nav">
+            <a href="index.html">Pocetna</a>
+            <a href="about.html">O nama</a>
+            <a href="services.html">Usluge</a>
+            
+      </nav>
+
+      <a href="appointment.php" class="link-btn">Zakazi servis</a>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </div>
+
+</div>
+
+<section class="contact" id="contact">
+
+    <h1 class="heading" style="margin-top: 50px;">Pretrazi termin: </h1>
+    <form action="results.php" method="post" style="margin-bottom: 100px; ">
+      <?php
+
+         echo "<span>Broj telefona :</span>";
+         echo '<input type="text" class="box" name="broj_telefona" value="' . $default_broj_telefona . '" required>';
+
+
+         ?>
+       <input type="submit" value="Proveri" name="submit" class="link-btn">
+    </form>  
+ 
+ </section>
+ 
+<section class="footer">
+
+   
+   <div class="credit"> &copy; copyright <span>Servis automobila</span>  </div>
+
+</section>
+    
+</body>
+</html>
